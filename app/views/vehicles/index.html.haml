@@ -1,0 +1,38 @@
+%title Vehicles
+
+.container{ :style => "padding-left:22%;padding-right:%;" }
+  %center
+    %h3 Vehicle's list
+    %br
+  %table.table.table-dark
+    %thead
+      %tr
+        %th
+          = link_to "Model", :sort => "vehicle_model"
+        %th 
+          = link_to "Manufacturer Name", :sort => "manufacturer_name"
+        %th
+          = link_to "Fuel type", :sort => "fuel_type"
+        %th 
+          = link_to "Vehicle type", :sort => "vehicle_type"
+        %th
+          = link_to "Color", :sort => "color"
+        %th
+          = link_to "Price", :sort => "price"
+        %th
+          = link_to "Status", :sort => "status"
+    %tbody
+      - @vehicles.each do |vehicle|
+        %tr
+          %td.id
+            = link_to "#{vehicle.vehicle_model}", vehicle_path(vehicle.id)
+          %td.id= vehicle.manufacturer.manufacturer_name
+          %td.id= vehicle.fuel_type
+          %td.id= vehicle.vehicle_type
+          %td.id= vehicle.color
+          %td.id= "$ #{vehicle.price}"
+          %td.id= vehicle.status.capitalize
+  .apple_pagination  
+    = will_paginate @users, :container => false
+  %br
+  = render 'vehicles/filters'

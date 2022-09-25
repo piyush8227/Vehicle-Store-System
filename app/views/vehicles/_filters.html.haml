@@ -1,0 +1,11 @@
+.container{:style => "padding-left:20%;padding-right:6%;"}
+  %h6 Filters
+  = form_with model: @vehicle, method: :get  do | form|
+    = form.radio_button :status, '', onclick: "this.parentNode.submit();"
+    = form.label 'All the vehicles'
+
+    = form.radio_button :status, 'available', checked: params[:status] == 'available', onclick: "this.parentNode.submit();"
+    = form.label 'Just Available vehicles'
+
+    = form.radio_button :status, 'sold', checked: params[:status] == 'sold', onclick: "this.parentNode.submit();"
+    = form.label 'Just Sold vehicles'

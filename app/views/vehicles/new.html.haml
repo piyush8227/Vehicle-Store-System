@@ -1,0 +1,53 @@
+%head
+	%center
+		%br
+		%h3 Create a vehicle
+		.container
+			%h5
+				= form_with url: '/vehicles', method: :post do |f|
+					%div
+						= f.label :vehicle_model
+						%br
+						= f.text_field :vehicle_model
+					%br
+					%div
+						= f.label :manufacturer
+						%br
+						= f.collection_select :manufacturer_id, Manufacturer.order(:manufacturer_name), :id, :manufacturer_name, {}, {class: 'form-control select2'}
+					%br
+					%div
+						= f.label :year_of_manufacture
+						%br
+						= f.text_field :year_of_manufacture
+					%br
+					%div
+						= f.label :fuel_type
+						%br
+						= f.text_field :fuel_type
+					%br
+					%div
+						= f.label :vehicle_type
+						%br
+						= f.text_field :vehicle_type
+					%br
+					%div
+						= f.label :color
+						%br
+						= f.text_field :color
+					%br
+					%div
+						= f.label :mileage
+						%br
+						= f.text_field :mileage
+					%br
+					%div
+						= f.label :max_speed
+						%br
+						= f.text_field :max_speed
+					%br
+					%div
+						= f.label :price
+						%br
+						= f.text_field :price
+					%br
+					%button.btn.btn-dark{:type => "submit"} Create Vehicle

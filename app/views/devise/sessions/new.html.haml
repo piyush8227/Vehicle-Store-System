@@ -1,0 +1,23 @@
+%h1
+  %center SIGN IN PAGE
+%h6
+  %center
+    %h2 Log in
+    %script{:src => "https://cdn.lordicon.com/xdjxvujz.js"}
+    %lord-icon{:src => "https://cdn.lordicon.com/twopqjaj.json", :style => "width:250px;height:250px", :trigger => "hover"}
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true , id:"email"
+      .field
+        = f.label :password
+        %br/
+        = f.password_field :password, id:"password",  autocomplete: "off"
+      
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me
+      %br
+      %button.btn.btn-light{:type => "submit"} Log in

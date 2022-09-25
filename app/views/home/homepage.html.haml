@@ -1,0 +1,16 @@
+%br/
+- if user_signed_in?
+    %h1{ :style => "padding-left:22%;padding-right:6%;" }
+        %center Welcome to Vehicle Store
+        %br
+        %center Explore exclusive luxury collection of vehicles
+- else
+    %center
+        %script{:src => "https://cdn.lordicon.com/xdjxvujz.js"}
+        %lord-icon{:delay => "2000", :src => "https://cdn.lordicon.com/pxvzdlyo.json", :style => "width:250px;height:250px", :trigger => "loop"}
+        %h3 Vehicle Store System
+        %br
+        %button.btn.btn-dark.btn-lg{:type => "button"}
+            = link_to "Register", new_user_registration_path
+        %button.btn.btn-light.btn-lg{:type => "button"}
+            = link_to "Login", new_user_session_path

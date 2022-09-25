@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+:css
+  body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+  }
+  .sidenav {
+    margin: 0;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+    background-color: #111;
+    overflow: auto;
+    padding: 0;
+  }
+
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+  .active {
+    background-color: green;
+    color: white;
+  }
+
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .navbar {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding-top: auto;
+  }
+
+  .navbar-brand a, .logo-img{
+    margin-right: auto;
+  }
+
+  .navbar-nav {
+    margin-left: 95%;
+  }
+  .btn.btn-light.btn-sm {
+    background-color: beige;
+    color: black;
+    text-decoration: none;
+  }
+
+.apple_pagination {
+  background: #f1f1f1;
+  border: 0px solid #e5e5e5;
+  text-align: center;
+  padding: 0.8em;
+  width: auto;
+  cursor: default; }
+.apple_pagination a, .apple_pagination span {
+  padding: 0.2em 0.3em; }
+.apple_pagination .disabled {
+  color: blue; }
+.apple_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #bebebe;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 1px; }
+.apple_pagination a {
+  text-decoration: none;
+  color: black; }
+.apple_pagination a:hover, .apple_pagination a:focus {
+  text-decoration: underline; }
+
+.btn.btn-sm{
+  background-color: #fff;
+  color: #333333;
+  text-decoration-color: black;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: grey;
+}
+
+.container-rails-logo{
+  padding-top: 70px;
+}
+.container-show{
+  text-align: initial;
+}
+.btn{
+  border-radius: 3rem;
+}
+.button, input, optgroup, select, textarea{
+  border-radius: 0.6rem;
+}
+.form-control.select2{
+  width: 24%;
+}
+.modal-dialog{
+    overflow-y: initial
+}
+.modal-body{
+    height: 50vh;
+    overflow-y: auto;
+}

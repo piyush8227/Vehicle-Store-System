@@ -1,0 +1,14 @@
+%head
+	%center
+		%h3 Create a manufacturer
+		%br
+		.container
+			%h5
+				= form_with url: '/manufacturers', method: :post do |f|
+					%div
+						= f.label :manufacturer_name
+						%br
+						%br
+						= f.text_field :manufacturer_name
+					%br
+					%button.btn.btn-dark{:type => "submit"} Create Manufacturer

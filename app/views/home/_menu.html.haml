@@ -1,0 +1,13 @@
+.sidenav
+  %br
+  = link_to 'Add Manufacturer', new_manufacturer_path, method: :get, class:"navbar-brand"
+  %br
+  = link_to 'Report of manufacturers', manufacturers_path, method: :get, class:"navbar-brand" 
+  %br
+  = link_to 'Add Vehicle', new_vehicle_path, method: :get, class:"navbar-brand"
+  %br
+  = link_to 'List of Vehicles', vehicles_path, method: :get, class:"navbar-brand"
+  %br 
+  %li.nav-item
+    %a.nav-link.active{"aria-current" => "page", :href => "#"}
+  = link_to 'Sign Out <i class="fa fa-sign-out"></i>'.html_safe, destroy_user_session_path, method: :delete, class:"navbar-brand"

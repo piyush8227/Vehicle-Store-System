@@ -1,0 +1,20 @@
+%title Manufacturers
+%body
+  %head
+    %center
+      %br
+      %h3 Manufacturer's list
+.container{ :style => "padding-left:25%;padding-right:6%;" }
+  %table.table.table-dark
+    %thead
+      %tr
+        %th Id
+        %th Name
+    %tbody
+      - @manufacturers.each do |manufacturer|
+        %tr
+          %td.id= manufacturer.id
+          %td
+            = link_to "#{manufacturer.manufacturer_name}", manufacturer_path(manufacturer.id)
+  .apple_pagination  
+    = will_paginate @users, :container => false

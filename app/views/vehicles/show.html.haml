@@ -1,0 +1,48 @@
+%center 
+  %h3 Vehicle details
+  .container-show{:style => "padding-left:25%;padding-right:6%;"}
+    %p
+      %h5
+        Model:
+        = @vehicle.vehicle_model
+    %p
+      %h5
+        Manufacturer name:
+        = @vehicle.manufacturer.manufacturer_name
+    %p
+      %h5
+        Year of manufacture:    
+        = @vehicle.year_of_manufacture
+    %p
+      %h5
+        Fuel type:    
+        = @vehicle.fuel_type
+    %p
+      %h5      
+        Vehicle type:
+        = @vehicle.vehicle_type
+    %p
+      %h5
+        Color:
+        = @vehicle.color
+    %p
+      %h5
+        Mileage (Kmpl):
+        = @vehicle.mileage
+    %p
+      %h5
+        Max Speed (Kmph):
+        = @vehicle.max_speed
+    %p
+      %h5      
+        Price: $
+        = @vehicle.price
+    %p
+      %h5      
+        Status: 
+        = @vehicle.status.capitalize
+    %br
+    %button.btn.btn-light{:type => "button"}
+      = link_to "Sell", sold_vehicle_path, method: :put
+    %button.btn.btn-dark{:type => "button"}
+      = link_to "Back" , vehicles_path

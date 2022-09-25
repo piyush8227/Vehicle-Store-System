@@ -1,0 +1,27 @@
+%center 
+  %h3 Report from Vehicle Store
+  %br
+  .container
+    %p
+      %h5
+        Vehicle with the min mileage: 
+        = @min_mileage
+    %p
+      %h5
+        Vehicle with the max mileage: 
+        = @max_mileage
+    %p
+      %h5
+        Cheapest vehicle:
+        = @min_price
+    %p
+      %h5
+        Most expensice vehicle:
+        = @max_price
+    %p
+      %h5
+        Vehicle with the Max Top Speed:
+        = @max_top_speed
+    %br
+    %button.btn.btn-dark{:type => "button"}
+      = link_to "Back" , manufacturers_path

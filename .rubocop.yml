@@ -1,0 +1,150 @@
+inherit_mode:
+  merge:
+    - Exclude
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - db/schema.rb
+
+#Tries to produce a complexity score that's a measure of the complexity the reader experiences when looking at a method. 
+Metrics/PerceivedComplexity:
+  Enabled: false
+#Uses a guard clause instead of wrapping the code inside a conditional expression
+Style/GuardClause:
+  Enabled: false
+#To check if the length of a block exceeds some maximum value
+Metrics/BlockLength:
+  Max: 100
+  
+#To check if the length of a method exceeds some maximum value.
+Metrics/MethodLength:
+  Max: 50
+
+#To check the length of lines in the source code.
+Layout/LineLength:
+  Max: 200
+
+#To checks that include, extend and prepend statements appear inside classes and modules, not at the top level, so as to not affect the behavior of Object.
+Style/MixinUsage:
+  Enabled: false
+
+#To checks that the cyclomatic complexity of methods is not higher than the configured maximum.
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+#To check missing top-level documentation of classes and modules.
+Style/Documentation:
+  Enabled: false
+
+# To check whether a gem is listed more than once.
+Bundler/DuplicatedGem:
+  Enabled: false
+
+#To check that the ABC size of methods is not higher than the configured maximum.
+Metrics/AbcSize:
+  Enabled: false
+
+#To check the indentation of the first line from right-hand-side of a multi-line assignment.
+Layout/AssignmentIndentation:
+  Enabled: true
+
+#To check indentation of comments.
+Layout/CommentIndentation:
+  Enabled: true
+
+#To check whether there are two or more consecutive empty lines. 
+Layout/EmptyLines:
+  Enabled: true
+
+# To check whether class/module/method definitions are separated by one or more empty lines.
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+#To check the consistent style enforces that first key in hash literal where the opening brace and first key are on
+#separate lines is indented the same as a hash literal which is not defined inside a method call. 
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
+
+#To check for inconsistent indentation.
+Layout/IndentationConsistency:
+  Enabled: true
+  EnforcedStyle: normal
+
+#To check that the indentation method is consistent. Either tabs only or spaces only are used for indentation.
+Layout/IndentationStyle:
+  Enabled: true
+
+#To check for indentation that doesn't use the specified number of spaces.
+Layout/IndentationWidth:
+  Enabled: true
+
+#To check whether the rescue and ensure keywords are aligned properly.
+Layout/RescueEnsureAlignment:
+  Enabled: true
+
+#To check the spacing inside and after block parameters pipes.
+Layout/SpaceAroundBlockParameters:
+  Enabled: true
+
+#To check that block braces have or don't have a space before the opening brace depending on configuration.
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+
+#To check that block braces have or don't have surrounding space inside them on configuration.
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+
+#To check that braces used for hash literals have or don't have surrounding space depending on configuration.
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+
+#To check for expressions where there is a call to a predicate method with at least one argument, 
+#where no parentheses are used around the parameter list, and a boolean operator, && or ||, is used in the last argument.
+Lint/RequireParentheses: 
+  Enabled: true
+
+#It looks for trailing whitespace in the source code.
+Layout/TrailingWhitespace:
+  Enabled: true
+
+#To check for non-ascii characters in identifier and constant names.
+Naming/AsciiIdentifiers:
+  Enabled: true
+
+#To check for class and module names with an underscore in them.
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+
+#To check that source files have snake_case names. 
+Naming/FileName:
+  Enabled: true
+
+#To make sure that all methods use the configured style, snake_case or camelCase, for their names.
+Naming/MethodName:
+  Enabled: true
+
+#To make sure that predicates are named properly. is_a? method is allowed by default.
+Naming/PredicateName:
+  Enabled: true
+
+#To make sure that all variables use the configured style, snake_case or camelCase, for their names.
+Naming/VariableName:
+  Enabled: false
+
+#To check for uses of and and or, and suggests using && and || instead.
+Style/AndOr:
+  Enabled: true
+
+#To check for uses of braces or do/end around single line or multi-line blocks.
+Style/BlockDelimiters:
+  Enabled: true
+
+#To check the syntax of hash literal defined.
+Style/HashSyntax:
+  Enabled: true
+
+#To check for big numeric literals without _ between groups of digits in them.
+Style/NumericLiterals:
+  Enabled: true
